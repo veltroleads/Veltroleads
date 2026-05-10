@@ -3,7 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Veltro — IFA Client Introductions</title>
+<title>Veltro — Qualified Client Introductions for UK IFAs</title>
+<meta name="description" content="Veltro identifies individuals who have recently inherited, sold a business, or are approaching retirement — and introduces them directly to you. Exclusive. Fully qualified. UK independent financial advisers only.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://veltroleads.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@300;400;500&family=Syne:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -54,17 +57,23 @@ body::after {
 /* ── PAGE SYSTEM ────────────────────────────────── */
 .page { display: none; min-height: 100vh; }
 .page.active { display: block; }
-.pt { padding-top: 60px; }
+.pt { padding-top: 68px; }
 
 /* ── NAV ────────────────────────────────────────── */
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 200;
-  height: 60px; display: flex; align-items: center; justify-content: space-between;
+  height: 68px; display: flex; align-items: center; justify-content: space-between;
   padding: 0 48px; border-bottom: 1px solid transparent; transition: all .35s;
 }
 nav.scrolled { background: rgba(8,8,8,.96); border-color: var(--border); backdrop-filter: blur(20px); }
-.logo { font-family: var(--disp); font-size: 1.65rem; letter-spacing: .04em; color: var(--white); cursor: pointer; line-height: 1; }
-.logo span { color: var(--or); }
+.logo {
+  font-family: var(--disp); font-size: 2.2rem; letter-spacing: .06em;
+  color: var(--white); cursor: pointer; line-height: 1;
+  display: flex; align-items: center; gap: 2px;
+}
+.logo span {
+  color: var(--or); font-size: 2.8rem; line-height: .7; margin-bottom: -2px;
+}
 .nav-links { display: flex; align-items: center; gap: 2px; }
 .nav-links a {
   font-family: var(--mono); font-size: .63rem; letter-spacing: .13em; text-transform: uppercase;
@@ -77,19 +86,8 @@ nav.scrolled { background: rgba(8,8,8,.96); border-color: var(--border); backdro
   transition: background .2s !important;
 }
 .nav-cta:hover { background: var(--or2) !important; }
-.burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; }
-.burger span { display: block; width: 22px; height: 1px; background: var(--text); transition: .3s; }
-.mob-menu {
-  display: none; position: fixed; top: 60px; left: 0; right: 0;
-  z-index: 199; background: rgba(8,8,8,.98); border-bottom: 1px solid var(--border); flex-direction: column;
-}
-.mob-menu.open { display: flex; }
-.mob-menu a {
-  font-family: var(--mono); font-size: .68rem; letter-spacing: .1em; text-transform: uppercase;
-  color: var(--text); padding: 17px 28px; border-bottom: 1px solid var(--border); cursor: pointer;
-  text-decoration: none; transition: color .2s;
-}
-.mob-menu a:hover { color: var(--or); }
+.burger { display: none; }
+.mob-menu { display: none; }
 
 /* ── REVEAL ─────────────────────────────────────── */
 .rv  { opacity: 0; transform: translateY(28px); transition: opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1); }
@@ -111,7 +109,7 @@ section { padding: 110px 0; }
 .lbl::before { content: '[ '; opacity: .5; }
 .lbl::after  { content: ' ]'; opacity: .5; }
 
-h1.ht { font-family: var(--disp); font-size: clamp(5rem, 12vw, 11rem); line-height: .93; color: var(--white); letter-spacing: .01em; }
+h1.ht { font-family: var(--disp); font-size: clamp(2.8rem, 5.5vw, 6rem); line-height: .96; color: var(--white); letter-spacing: .01em; }
 h1.ht em { color: var(--or); font-style: normal; display: block; }
 h2.st { font-family: var(--disp); font-size: clamp(3rem, 7vw, 6.5rem); line-height: .93; color: var(--white); letter-spacing: .01em; }
 h2.st em { color: var(--or); font-style: normal; }
@@ -135,8 +133,8 @@ p.sm   { font-size: .78rem; line-height: 1.8;  color: var(--text);  font-weight:
 
 /* ── HERO ───────────────────────────────────────── */
 .hero {
-  min-height: 100vh; display: flex; align-items: flex-end;
-  padding-bottom: 90px; position: relative; overflow: hidden;
+  min-height: 100vh; display: flex; align-items: center;
+  padding-top: 80px; padding-bottom: 60px; position: relative; overflow: hidden;
 }
 /* The warm glow — bigger, richer, the original's secret ingredient */
 .hero::before {
@@ -159,10 +157,10 @@ p.sm   { font-size: .78rem; line-height: 1.8;  color: var(--text);  font-weight:
   pointer-events: none;
 }
 
-.hero-grid { display: grid; grid-template-columns: 1fr 380px; gap: 64px; align-items: flex-end; width: 100%; position: relative; z-index: 1; }
+.hero-grid { display: flex; flex-direction: column; align-items: center; text-align: center; width: 100%; position: relative; z-index: 1; max-width: 820px; margin: 0 auto; }
 .eyebrow {
   font-family: var(--mono); font-size: .6rem; letter-spacing: .18em;
-  text-transform: uppercase; color: var(--text); display: flex; align-items: center; gap: 12px; margin-bottom: 40px;
+  text-transform: uppercase; color: var(--text); display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 20px;
 }
 .pulse { width: 5px; height: 5px; background: var(--or); border-radius: 50%; position: relative; flex-shrink: 0; }
 .pulse::after {
@@ -171,20 +169,47 @@ p.sm   { font-size: .78rem; line-height: 1.8;  color: var(--text);  font-weight:
 }
 @keyframes pulse { 0% { transform: scale(1); opacity: .7; } 100% { transform: scale(2.4); opacity: 0; } }
 
-.hero-sub  { font-size: .83rem; line-height: 1.85; color: var(--text2); max-width: 460px; margin: 26px 0 38px; }
-.hero-acts { display: flex; gap: 12px; flex-wrap: wrap; }
-.hero-note {
-  margin-top: 24px; font-family: var(--mono); font-size: .6rem; letter-spacing: .06em;
-  color: var(--text); line-height: 1.75; max-width: 430px;
-  padding-top: 22px; border-top: 1px solid var(--border2);
+.hero-sub  { font-size: .9rem; line-height: 1.8; color: var(--text2); max-width: 580px; margin: 16px auto 26px; }
+.hero-acts { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+.hero-proof {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 0;
+  margin-top: 24px; padding-top: 22px; border-top: 1px solid var(--border);
+  width: 100%;
 }
-.hero-note strong { color: var(--white2); font-weight: 400; }
+.hp-item {
+  font-family: var(--mono); font-size: .55rem; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--text); padding: 0 20px; border-right: 1px solid var(--border);
+  display: flex; align-items: center; gap: 7px; line-height: 1;
+}
+.hp-item:last-child { border-right: none; }
+.hp-item::before { content: ''; display: block; width: 4px; height: 4px; background: var(--or); border-radius: 50%; flex-shrink: 0; }
 
 /* Stats panel — original layout, elevated */
 .stats-box {
   background: var(--card); border: 1px solid var(--border);
   border-left: 2px solid var(--or); position: relative; overflow: hidden;
 }
+
+/* Hero horizontal stats strip */
+.hero-stats-strip {
+  display: grid; grid-template-columns: repeat(4,1fr);
+  gap: 1px; background: var(--border);
+  width: 100%; margin-top: 28px;
+}
+.hss-item {
+  background: var(--card); padding: 20px 24px; text-align: center;
+  position: relative; transition: background .25s;
+}
+.hss-item::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(to right, var(--or), transparent);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform .4s cubic-bezier(.16,1,.3,1);
+}
+.hss-item:hover { background: rgba(255,92,26,.03); }
+.hss-item:hover::before { transform: scaleX(1); }
+.hss-n { font-family: var(--disp); font-size: 2rem; color: var(--or); line-height: 1; margin-bottom: 5px; }
+.hss-l { font-family: var(--mono); font-size: .5rem; letter-spacing: .1em; text-transform: uppercase; color: var(--text); line-height: 1.4; }
 .stats-box::before {
   content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
   background: linear-gradient(to right, var(--or), transparent);
@@ -423,13 +448,13 @@ footer { border-top: 1px solid var(--border); padding: 40px 0; }
 @media (max-width: 960px) {
   .wrap { padding: 0 24px; }
   section { padding: 80px 0; }
-  nav { padding: 0 24px; }
-  .nav-links { display: none; }
-  .burger { display: flex; }
-  .hero-grid, .two-col, .cg { grid-template-columns: 1fr; gap: 44px; }
-  .stats-box { display: grid; grid-template-columns: 1fr 1fr; }
-  .stat-row  { border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-  .stat-row:nth-child(2n) { border-right: none; }
+  nav { padding: 0 20px; height: 60px; }
+  .logo { font-size: 1.6rem; }
+  .logo span { font-size: 2rem; }
+  .nav-links a { font-size: .52rem; padding: 6px 8px; letter-spacing: .08em; }
+  .nav-cta { padding: 7px 12px !important; font-size: .52rem !important; margin-left: 4px; }
+  .two-col, .cg { grid-template-columns: 1fr; gap: 44px; }
+  .hero-stats-strip { grid-template-columns: 1fr 1fr; }
   .prob-grid  { grid-template-columns: 1fr 1fr; }
   .price-grid { grid-template-columns: 1fr; }
   .three-col, .stat-band { grid-template-columns: 1fr; }
@@ -441,6 +466,13 @@ footer { border-top: 1px solid var(--border); padding: 40px 0; }
   .fi-inner { flex-direction: column; align-items: flex-start; }
   .f-copy { text-align: left; }
   .pq { padding: 36px 28px; }
+}
+@media (max-width: 480px) {
+  nav { padding: 0 16px; }
+  .logo { font-size: 1.3rem; }
+  .logo span { font-size: 1.7rem; }
+  .nav-links a:not(.nav-cta) { display: none; }
+  .nav-links a.nav-cta { display: flex; }
 }
 @media (max-width: 600px) {
   .prob-grid { grid-template-columns: 1fr; }
@@ -481,29 +513,21 @@ footer { border-top: 1px solid var(--border); padding: 40px 0; }
   <section class="hero">
     <div class="wrap" style="width:100%">
       <div class="hero-grid">
-        <div>
-          <div class="eyebrow rv"><span class="pulse"></span>For UK Independent Financial Advisers</div>
-          <h1 class="ht rv d1">
-            THE CLIENTS<br>
-            WHO NEED<br>
-            YOU MOST<br>
-            ARE OUT<br>
-            THERE.<em>WE FIND<br>THEM FIRST.</em>
-          </h1>
-          <p class="hero-sub rv d2">Veltro identifies individuals at the exact moment a financial life event — an inheritance, a business sale, an approaching retirement — has made professional advice urgent. We approach them, qualify them, and introduce them to you. One adviser. Never shared.</p>
-          <div class="hero-acts rv d3">
-            <a onclick="go('how')" class="btn btn-p">Understand the Methodology <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-            <a onclick="go('contact')" class="btn btn-g">Request a Call</a>
-          </div>
-          <p class="hero-note rv d4"><strong>Every introduction is a named individual who has confirmed they are open to speaking with an adviser.</strong> Not a form fill. Not a contact request. An introduction.</p>
+        <div class="eyebrow rv"><span class="pulse"></span>For UK Independent Financial Advisers</div>
+        <h1 class="ht rv d1">
+          THE CLIENTS WHO NEED<br>
+          YOU MOST ARE OUT THERE.<em>WE FIND THEM FIRST.</em>
+        </h1>
+        <p class="hero-sub rv d2">Veltro identifies individuals at the exact moment a financial life event — an inheritance, a business sale, an approaching retirement — has made professional advice urgent. We approach them, qualify them, and introduce them to you. One adviser. Never shared.</p>
+        <div class="hero-acts rv d3">
+          <a onclick="go('how')" class="btn btn-p">Understand the Methodology <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a onclick="go('contact')" class="btn btn-g">Request a Call</a>
         </div>
-        <div class="rvr d2">
-          <div class="stats-box">
-            <div class="stat-row"><div class="stat-n">3–4×</div><div class="stat-l">Higher conversion — life-event introductions vs cold enquiries</div></div>
-            <div class="stat-row"><div class="stat-n">100%</div><div class="stat-l">Exclusive — one adviser per introduction, permanently</div></div>
-            <div class="stat-row"><div class="stat-n">0</div><div class="stat-l">Introductions made before full qualification is complete</div></div>
-            <div class="stat-row"><div class="stat-n">GDPR</div><div class="stat-l">Publicly sourced data only — clean methodology throughout</div></div>
-          </div>
+        <div class="hero-stats-strip rv d4">
+          <div class="hss-item"><div class="hss-n">3–4×</div><div class="hss-l">Higher conversion rate</div></div>
+          <div class="hss-item"><div class="hss-n">100%</div><div class="hss-l">Exclusive introductions</div></div>
+          <div class="hss-item"><div class="hss-n">0</div><div class="hss-l">Unqualified introductions</div></div>
+          <div class="hss-item"><div class="hss-n">60</div><div class="hss-l">Day delivery commitment</div></div>
         </div>
       </div>
     </div>
@@ -594,7 +618,7 @@ footer { border-top: 1px solid var(--border); padding: 40px 0; }
       <a onclick="go('faq')">FAQ</a>
       <a onclick="go('contact')">Contact</a>
     </div>
-    <div class="f-copy">© 2026 Veltro Leads<br>noah@veltroleads.com</div>
+    <div class="f-copy">© 2024 Veltro Leads<br>noah@veltroleads.com</div>
   </div></div></footer>
 </div>
 
@@ -634,7 +658,7 @@ footer { border-top: 1px solid var(--border); padding: 40px 0; }
   <footer><div class="wrap"><div class="fi-inner">
     <div class="f-logo">VELTRO<span>.</span></div>
     <div class="f-links"><a onclick="go('home')">Home</a><a onclick="go('how')">Methodology</a><a onclick="go('pricing')">Pricing</a><a onclick="go('contact')">Contact</a></div>
-    <div class="f-copy">© 2026 Veltro Leads<br>noah@veltroleads.com</div>
+    <div class="f-copy">© 2024 Veltro Leads<br>noah@veltroleads.com</div>
   </div></div></footer>
 </div>
 
@@ -692,7 +716,7 @@ footer { border-top: 1px solid var(--border); padding: 40px 0; }
   <footer><div class="wrap"><div class="fi-inner">
     <div class="f-logo">VELTRO<span>.</span></div>
     <div class="f-links"><a onclick="go('home')">Home</a><a onclick="go('problem')">The Problem</a><a onclick="go('pricing')">Pricing</a><a onclick="go('contact')">Contact</a></div>
-    <div class="f-copy">© 2026 Veltro Leads<br>noah@veltroleads.com</div>
+    <div class="f-copy">© 2024 Veltro Leads<br>noah@veltroleads.com</div>
   </div></div></footer>
 </div>
 
@@ -771,7 +795,7 @@ footer { border-top: 1px solid var(--border); padding: 40px 0; }
   <footer><div class="wrap"><div class="fi-inner">
     <div class="f-logo">VELTRO<span>.</span></div>
     <div class="f-links"><a onclick="go('home')">Home</a><a onclick="go('problem')">The Problem</a><a onclick="go('how')">Methodology</a><a onclick="go('faq')">FAQ</a></div>
-    <div class="f-copy">© 2026 Veltro Leads<br>noah@veltroleads.com</div>
+    <div class="f-copy">© 2024 Veltro Leads<br>noah@veltroleads.com</div>
   </div></div></footer>
 </div>
 
@@ -805,7 +829,7 @@ footer { border-top: 1px solid var(--border); padding: 40px 0; }
   <footer><div class="wrap"><div class="fi-inner">
     <div class="f-logo">VELTRO<span>.</span></div>
     <div class="f-links"><a onclick="go('home')">Home</a><a onclick="go('pricing')">Pricing</a><a onclick="go('contact')">Contact</a></div>
-    <div class="f-copy">© 2026 Veltro Leads<br>noah@veltroleads.com</div>
+    <div class="f-copy">© 2024 Veltro Leads<br>noah@veltroleads.com</div>
   </div></div></footer>
 </div>
 
@@ -858,7 +882,7 @@ footer { border-top: 1px solid var(--border); padding: 40px 0; }
   <footer><div class="wrap"><div class="fi-inner">
     <div class="f-logo">VELTRO<span>.</span></div>
     <div class="f-links"><a onclick="go('home')">Home</a><a onclick="go('pricing')">Pricing</a><a onclick="go('faq')">FAQ</a></div>
-    <div class="f-copy">© 2026 Veltro Leads<br>noah@veltroleads.com</div>
+    <div class="f-copy">© 2024 Veltro Leads<br>noah@veltroleads.com</div>
   </div></div></footer>
 </div>
 
